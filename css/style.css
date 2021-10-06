@@ -1,0 +1,10 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    font-family: 'Josefin Sans', Courier, monospace;
+    font-weight: bold;
+}
+.main {
+    font-size: 18px;
+}
