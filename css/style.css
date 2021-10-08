@@ -20,6 +20,28 @@ body {
     position: relative;
 }
 
+.btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: hsl(234, 11%, 52%);
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-family: inherit;
+ }
+
+ .btn-bold {
+     font-weight: bold;
+ }
+
+.btn:hover {
+    color: hsl(236, 33%, 92%);
+}
+
+p.btn {
+    pointer-events: none;
+}
+
 .container {
     width: 100%;
     max-width: 540px;
@@ -140,6 +162,49 @@ body {
 .todo-element:hover > .todo-delete {
     transform: scale(1);
 } 
+
+.todo-bottom-side {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: hsl(235, 24%, 19%);
+    border-bottom: 1px solid hsl(237, 14%, 26%);
+    border-left: 1px solid  hsl(237, 14%, 26%);
+    border-right: 1px solid  hsl(237, 14%, 26%);
+    padding: 2rem 2.4rem;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.todo-filter {
+    display: inline-block;
+    padding: 0.5rem 2.4rem;
+    position: relative;
+    transform: translate(-50%, -200%);
+    left: 50%;
+    /* border-bottom: 1px solid  #393A4B;
+    border-radius: 5px; */
+}
+
+.todo-filter label {
+    /* background: transparent; */
+    margin: 0 0.8rem;
+}
+
+.todo-filter input[type="radio"] {
+    display: none;
+}
+
+.todo-filter input[type="radio"]:checked + label {
+    color: hsl(228, 45%, 44%);
+}
+
+.completed {
+    /* background: transparent;
+    border: none;
+    font: inherit; */
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
