@@ -1,10 +1,145 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 62.5%;
+    color: hsl(234, 39%, 85%)
+}
 
 body {
-    font-family: 'Josefin Sans', Courier, monospace;
+    font-size: 1.8rem;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: hsl(235, 21%, 11%);
+    background-color: hsl(235, 24%, 19%) hsl(234, 39%, 85%) hsl(236, 33%, 92%) hsl(234, 11%, 52%) hsl(233, 14%, 35%) hsl(237, 14%, 26%);
+    background-image: url("../images/bg-desktop-dark.jpg");
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 540px;
+}
+
+.header {
+    color:white;
+    font-size: 4rem;
     font-weight: bold;
+    letter-spacing: 14px;
+    line-height: 2rem;
+    margin: 7rem 0 3rem 0;
+    /* justify-content: flex-start; */
 }
-.main {
-    font-size: 18px;
+
+.input-textbox {
+    width:100%;
+    background-color: hsl(235, 24%, 19%);
+    padding: 2rem 2.4rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-top: 4.8rem;
+    margin-bottom: 2.4rem;
+    border: 1px solid hsl(237, 14%, 26%);
 }
+
+.todo-input {
+    background-color: transparent;
+    border: none;
+    font-size: 1.8rem;
+    font-family: inherit;
+    line-height: 2rem;
+    color: inherit;
+    margin-left: 2rem;
+    /* flex: 1 0; */
+}
+
+.todo-input:focus {
+    outline: none;
+ }
+
+.todo-circle, .todo-check {
+    width:24px;
+    height: 24px;
+    border: 1px solid hsl(233, 14%, 35%);
+    border-radius: 50%;
+    background: transparent;
+}
+ 
+.todo-list {
+    border-top: 1px solid  hsl(237, 14%, 26%);
+    border-left: 1px solid hsl(237, 14%, 26%);
+    border-right: 1px solid hsl(237, 14%, 26%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* .todo-list:first-child {
+    overflow: hidden;
+ } */
+
+.todo-element {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: hsl(235, 24%, 19%);
+    border-bottom: 1px solid  hsl(237, 14%, 26%);
+    padding: 2rem 2.4rem;
+}
+
+.todo-element p {
+    flex: 1;
+    margin-left: 2rem;
+}
+
+.todo-element-hide {
+    display: none;
+}
+ 
+.todo-element-check p {
+    color: hsl(233, 14%, 35%);
+    text-decoration: line-through;
+}
+
+.todo-check {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    transition: border .5s ease-in-out;
+}
+ 
+.todo-check img{
+    transform: scale(0);
+    transition: transform .5s ease-in-out;
+}
+ 
+.todo-element-check .todo-check {
+    background: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));     
+}
+ 
+.todo-element-check .todo-element-check  img{
+    transform: scale(1);
+} 
+
+.todo-element:hover > .todo-check {
+    border: 1px solid hsl(280, 87%, 65%);
+}
+
+.todo-delete {
+    background: transparent;
+    border: none;
+    transform: scale(0); 
+    transition: transform .5s ease-in-out;
+    color: hsl(234, 39%, 85%);
+}
+ 
+.todo-element:hover > .todo-delete {
+    transform: scale(1);
+} 
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
